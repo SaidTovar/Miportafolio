@@ -51,7 +51,7 @@ fun HeroSection(
             modifier = Modifier
                 .fillMaxWidth()
                 .height(400.dp)
-                .blur(60.dp)
+                .blur(20.dp)
                 .graphicsLayer(alpha = 0.4f),
             contentAlignment = Alignment.Center
         ) {
