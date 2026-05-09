@@ -14,6 +14,9 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import androidx.compose.ui.draw.blur
+import androidx.compose.ui.graphics.graphicsLayer
+import com.tovars.miportafolio.core.ui.components.MultimediaWaveform
 import com.tovars.miportafolio.core.ui.theme.SilverGray
 import com.tovars.miportafolio.domain.model.Language
 
@@ -36,6 +39,21 @@ fun HeroSection(
             .padding(horizontal = 24.dp),
         contentAlignment = Alignment.Center
     ) {
+        // Fondo de ondas difuminadas
+        Box(
+            modifier = Modifier
+                .fillMaxWidth()
+                .height(400.dp)
+                .blur(60.dp)
+                .graphicsLayer(alpha = 0.4f),
+            contentAlignment = Alignment.Center
+        ) {
+            MultimediaWaveform(
+                modifier = Modifier.fillMaxSize(),
+                color = MaterialTheme.colorScheme.primary.copy(alpha = 0.5f)
+            )
+        }
+
         Column(
             horizontalAlignment = Alignment.CenterHorizontally,
             verticalArrangement = Arrangement.Center

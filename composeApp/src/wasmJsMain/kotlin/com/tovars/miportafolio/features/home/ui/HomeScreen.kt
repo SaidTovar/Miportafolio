@@ -56,22 +56,11 @@ fun HomeScreen(viewModel: HomeViewModel) {
                                 currentWidth = currentWidth,
                                 language = state.language,
                                 onExploreProjectsClick = {
-                                    coroutineScope.launch { scrollState.animateScrollToItem(3) }
+                                    coroutineScope.launch { scrollState.animateScrollToItem(2) }
                                 },
                                 onContactClick = { /* Handle contact */ },
                                 modifier = revealModifier
                             )
-                        }
-                    }
-
-                    item(key = "Waveform") {
-                        RevealAnimation(delayMillis = 500) { revealModifier ->
-                            Box(modifier = revealModifier.padding(vertical = 80.dp).fillMaxWidth(), contentAlignment = Alignment.Center) {
-                                MultimediaWaveform(
-                                    modifier = Modifier.fillMaxWidth(if (currentWidth > 1000) 0.6f else 0.8f).height(120.dp),
-                                    color = MaterialTheme.colorScheme.primary.copy(alpha = 0.6f)
-                                )
-                            }
                         }
                     }
 
@@ -84,18 +73,18 @@ fun HomeScreen(viewModel: HomeViewModel) {
                         )
                     }
 
-                    item(key = "Projects") {
-                        ProjectsSection(
-                            projects = aboutMe.projects,
+                    item(key = "Experience") {
+                        ExperienceSection(
+                            experience = aboutMe.experience,
                             currentWidth = currentWidth,
                             hazeState = hazeState,
                             language = state.language
                         )
                     }
 
-                    item(key = "Experience") {
-                        ExperienceSection(
-                            experience = aboutMe.experience,
+                    item(key = "Projects") {
+                        ProjectsSection(
+                            projects = aboutMe.projects,
                             currentWidth = currentWidth,
                             hazeState = hazeState,
                             language = state.language
