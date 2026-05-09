@@ -43,7 +43,7 @@ class PortfolioRepositoryImpl : PortfolioRepository {
         projects = listOf(
             Project(
                 title = "Mis Notas Uniguajira",
-                description = "Plataforma móvil académica líder para estudiantes de la Universidad de La Guajira. Facilita la consulta de registros académicos, horarios y rendimiento académico en tiempo real.",
+                description = "Plataforma móvil académica para estudiantes de la Universidad de La Guajira. Facilita la consulta de registros académicos, horarios y rendimiento académico en tiempo real.",
                 highlights = listOf(
                     "Más de 5,000 descargas activas en Google Play Store.",
                     "Implementación de Web Scraping avanzado para extracción de datos institucionales.",
@@ -105,12 +105,10 @@ class PortfolioRepositoryImpl : PortfolioRepository {
                 company = "ReadyChatAI.llc",
                 period = "Octubre 2025 - Actualidad",
                 location = "Remoto",
-                description = "Ingeniería de software enfocada en soluciones de comunicación inteligente y escalabilidad de productos móviles.",
+                description = "Desarrollo de aplicaciones móviles enfocadas en comunicación e IA.",
                 highlights = listOf(
                     "Translate Text: Integración de motores de traducción por IA en flujos de mensajería.",
-                    "AIReply: Automatización de respuestas mediante LLMs y prompts personalizados.",
-                    "Arquitectura MVVM avanzada, inyección de dependencias y optimización de recomposición en Compose.",
-                    "Garantía de persistencia mediante migraciones seguras en Room Database."
+                    "AIReply: Automatización de respuestas mediante LLMs y prompts personalizados."
                 ),
                 technologies = listOf("Kotlin", "Compose", "MVVM", "AI Integration", "Room"),
                 companyUrl = "https://www.linkedin.com/company/readychataimessenger/posts/?feedView=all",
@@ -151,7 +149,7 @@ class PortfolioRepositoryImpl : PortfolioRepository {
                 period = "Julio 2018 - Noviembre 2023"
             ),
             Education(
-                degree = "DESARROLLO DE IOT CON INTERFAZ EN MICROCONTROLADORES",
+                degree = "DIPLOMADO DE DESARROLLO DE IOT CON INTERFAZ EN MICROCONTROLADORES",
                 institution = "Universidad de La Guajira",
                 period = "2023 - 2024"
             )
@@ -226,12 +224,10 @@ class PortfolioRepositoryImpl : PortfolioRepository {
                 company = "ReadyChatAI.llc",
                 period = "October 2025 - Present",
                 location = "Remote",
-                description = "Development of modern Android apps focused on communication and AI, collaborating directly on key products.",
+                description = "Development of mobile apps focused on communication and AI.",
                 highlights = listOf(
                     "Translate Text: An SMS/MMS messaging manager with integrated intelligent translation.",
-                    "AIReply: SMS application with personalized automatic replies via AI prompts.",
-                    "Implementation of complex interfaces with Jetpack Compose and state optimization.",
-                    "Advanced Room Database management and design of robust migrations."
+                    "AIReply: SMS application with personalized automatic replies via AI prompts."
                 ),
                 technologies = listOf("Kotlin", "Compose", "Room", "Coroutines", "AI Integration")
             ),
@@ -267,7 +263,7 @@ class PortfolioRepositoryImpl : PortfolioRepository {
                 period = "July 2018 - November 2023"
             ),
             Education(
-                degree = "IoT DEVELOPMENT WITH MICROCONTROLLER INTERFACE",
+                degree = "DIPLOMADO DE DESARROLLO DE IOT CON INTERFAZ EN MICROCONTROLADORES",
                 institution = "University of La Guajira",
                 period = "2023 - 2024"
             )

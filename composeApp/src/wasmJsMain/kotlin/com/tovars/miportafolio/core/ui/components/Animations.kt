@@ -72,9 +72,10 @@ fun MultimediaWaveform(
             val x = i * (barWidth * 2.5f) + barWidth
             val normalizedX = i.toFloat() / barsCount
             
+            // Usamos multiplicadores enteros para la fase (1f, 2f) para que el ciclo sea continuo al reiniciar
             val variation = sin(normalizedX * 12f + phase) * 0.4f + 
-                            sin(normalizedX * 7f - phase * 0.7f) * 0.3f +
-                            sin(normalizedX * 18f + phase * 1.2f) * 0.15f
+                            sin(normalizedX * 7f - phase * 1.0f) * 0.3f +
+                            sin(normalizedX * 18f + phase * 2.0f) * 0.15f
             
             val barHeight = (height * 0.15f) + (height * 0.7f * abs(variation))
 
