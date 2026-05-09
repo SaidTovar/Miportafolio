@@ -17,7 +17,7 @@ class PortfolioRepositoryImpl : PortfolioRepository {
         name = "Said Tovar",
         role = "Software Engineer | Mobile Developer",
         subtitle = "Especializado en Android Nativo, Kotlin Multiplatform e Inteligencia Artificial.",
-        description = "Desarrollador de software multiplataforma con experiencia profesional en desarrollo Android nativo, Kotlin Multiplatform y Flutter, especializado en arquitecturas modernas, interfaces avanzadas, optimización de rendimiento, multimedia y soluciones escalables. Actualmente se desempeña como Desarrollador Android Full Time en RadiChat AI LLC.",
+        description = "Desarrollador de software multiplataforma con experiencia profesional en desarrollo Android nativo, Kotlin Multiplatform y Flutter, especializado en arquitecturas modernas, interfaces avanzadas, optimización de rendimiento, multimedia y soluciones escalables. Actualmente se desempeña como Desarrollador Android Full Time en ReadyChatAI.llc.",
         specialties = listOf(
             Specialty(
                 title = "Android & KMP",
@@ -78,17 +78,17 @@ class PortfolioRepositoryImpl : PortfolioRepository {
         experience = listOf(
             Experience(
                 role = "Desarrollador Android",
-                company = "RadiChat AI LLC",
+                company = "ReadyChatAI.llc",
                 period = "Octubre 2025 - Actualidad",
                 location = "Remoto",
-                description = "Desarrollo de aplicaciones Android modernas enfocadas en comunicación e IA.",
+                description = "Desarrollo de aplicaciones Android modernas enfocadas en comunicación e IA, colaborando directamente en productos clave de la compañía.",
                 highlights = listOf(
-                    "Implementación de interfaces complejas con Jetpack Compose",
-                    "Manejo avanzado de Room Database y migraciones robustas",
-                    "Optimización de estados de UI complejos y concurrencia con Flow",
-                    "Testing unitario y automatizado para asegurar calidad en producción"
+                    "Colaboración en 'Translate Text': Un gestor de mensajería SMS/MMS con traducción inteligente integrada.",
+                    "Colaboración en 'AIReply': Aplicación de SMS con respuestas automáticas personalizadas mediante prompts de IA.",
+                    "Implementación de interfaces complejas con Jetpack Compose y optimización de estados.",
+                    "Manejo avanzado de Room Database y diseño de migraciones robustas."
                 ),
-                technologies = listOf("Kotlin", "Compose", "Room", "Coroutines", "Flow", "MVVM")
+                technologies = listOf("Kotlin", "Compose", "Room", "Coroutines", "AI Integration")
             ),
             Experience(
                 role = "Desarrollador Autónomo",
@@ -128,7 +128,7 @@ class PortfolioRepositoryImpl : PortfolioRepository {
         name = "Said Tovar",
         role = "Software Engineer | Mobile Developer",
         subtitle = "Specialized in Native Android, Kotlin Multiplatform, and AI.",
-        description = "Cross-platform software developer with professional experience in native Android, Kotlin Multiplatform, and Flutter. Specialized in modern architectures, advanced interfaces, performance optimization, multimedia, and scalable solutions. Currently working as a Full-Time Android Developer at RadiChat AI LLC.",
+        description = "Cross-platform software developer with professional experience in native Android, Kotlin Multiplatform, and Flutter. Specialized in modern architectures, advanced interfaces, performance optimization, multimedia, and scalable solutions. Currently working as a Full-Time Android Developer at ReadyChatAI.llc.",
         specialties = listOf(
             Specialty(
                 title = "Android & KMP",
@@ -189,17 +189,17 @@ class PortfolioRepositoryImpl : PortfolioRepository {
         experience = listOf(
             Experience(
                 role = "Android Developer",
-                company = "RadiChat AI LLC",
+                company = "ReadyChatAI.llc",
                 period = "October 2025 - Present",
                 location = "Remote",
-                description = "Development of modern Android apps focused on communication and AI.",
+                description = "Development of modern Android apps focused on communication and AI, collaborating directly on key products.",
                 highlights = listOf(
-                    "Complex UI implementation with Jetpack Compose",
-                    "Advanced Room Database management and robust migrations",
-                    "Optimization of complex UI states and concurrency with Flow",
-                    "Unit and automated testing to ensure production quality"
+                    "Collaboration on 'Translate Text': An SMS/MMS messaging manager with integrated intelligent translation.",
+                    "Collaboration on 'AIReply': SMS application with personalized automatic replies via AI prompts.",
+                    "Implementation of complex interfaces with Jetpack Compose and state optimization.",
+                    "Advanced Room Database management and design of robust migrations."
                 ),
-                technologies = listOf("Kotlin", "Compose", "Room", "Coroutines", "Flow", "MVVM")
+                technologies = listOf("Kotlin", "Compose", "Room", "Coroutines", "AI Integration")
             ),
             Experience(
                 role = "Freelance Developer",

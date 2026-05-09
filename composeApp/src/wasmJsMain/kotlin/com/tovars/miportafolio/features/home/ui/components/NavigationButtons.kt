@@ -8,6 +8,7 @@ import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.ConnectWithoutContact
 import androidx.compose.material.icons.filled.Home
 import androidx.compose.material.icons.filled.Language
+import androidx.compose.material.icons.filled.Link
 import androidx.compose.material.icons.filled.School
 import androidx.compose.material.icons.filled.Work
 import androidx.compose.material3.*
@@ -44,6 +45,7 @@ fun NavigationButtons(
     currentWidth: Int,
     language: AppLanguage,
     onLanguageToggle: () -> Unit,
+    onLinkedInClick: () -> Unit,
     onItemClick: (NavigationItem) -> Unit,
     modifier: Modifier = Modifier
 ) {
@@ -107,6 +109,19 @@ fun NavigationButtons(
                     .height(24.dp)
                     .background(Color.White.copy(alpha = 0.1f))
             )
+
+            // LinkedIn Button
+            IconButton(
+                onClick = onLinkedInClick,
+                modifier = Modifier.size(40.dp)
+            ) {
+                Icon(
+                    imageVector = Icons.Default.Link,
+                    contentDescription = "LinkedIn",
+                    tint = Color(0xFF0A66C2),
+                    modifier = Modifier.size(20.dp)
+                )
+            }
 
             // Language Toggle
             TextButton(

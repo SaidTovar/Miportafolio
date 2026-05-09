@@ -21,6 +21,7 @@ import com.tovars.miportafolio.features.home.presentation.HomeViewModel
 import com.tovars.miportafolio.features.home.ui.components.*
 import dev.chrisbanes.haze.hazeSource
 import dev.chrisbanes.haze.rememberHazeState
+import kotlinx.browser.window
 import kotlinx.coroutines.launch
 
 @Composable
@@ -127,6 +128,9 @@ fun HomeScreen(viewModel: HomeViewModel) {
                 currentWidth = currentWidth,
                 language = state.language,
                 onLanguageToggle = { viewModel.toggleLanguage() },
+                onLinkedInClick = {
+                    window.open("https://www.linkedin.com/in/said-tovar-610824143", "_blank")
+                },
                 onItemClick = { item ->
                     coroutineScope.launch {
                         when (item) {
