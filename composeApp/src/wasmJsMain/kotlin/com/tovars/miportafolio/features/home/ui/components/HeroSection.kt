@@ -65,7 +65,7 @@ fun HeroSection(
             horizontalAlignment = Alignment.CenterHorizontally,
             verticalArrangement = Arrangement.Center
         ) {
-            Surface(
+            /* Surface(
                 color = MaterialTheme.colorScheme.primary.copy(alpha = 0.05f),
                 shape = RoundedCornerShape(100.dp),
                 border = BorderStroke(1.dp, MaterialTheme.colorScheme.primary.copy(alpha = 0.2f)),
@@ -79,7 +79,7 @@ fun HeroSection(
                     fontWeight = FontWeight.Bold,
                     letterSpacing = 1.sp
                 )
-            }
+            } */
 
             Text(
                 text = (if (language == Language.ES) "HOLA, SOY $name" else "HELLO, I'M $name").uppercase(),

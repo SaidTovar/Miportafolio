@@ -29,6 +29,8 @@ import dev.chrisbanes.haze.HazeState
 import androidx.compose.foundation.clickable
 import kotlinx.browser.window
 
+import androidx.compose.ui.layout.ContentScale
+
 @Composable
 fun ProjectsSection(
     projects: List<Project>,
@@ -222,18 +224,28 @@ fun ProjectItem(
                         ),
                     contentAlignment = Alignment.Center
                 ) {
-                    val projectIcon = when {
-                        project.title.contains("Notas") -> Icons.Default.MenuBook
-                        project.title.contains("Connect") -> Icons.Default.Share
-                        project.title.contains("Multimedia") -> Icons.Default.VolumeUp
-                        else -> Icons.Default.Work
+                    if (project.imageUrl.isNotEmpty()) {
+                        Icon(
+                            imageVector = Icons.Default.Image,
+                            contentDescription = null,
+                            modifier = Modifier.size(100.dp).graphicsLayer(alpha = 0.1f),
+                            tint = Color.White
+                        )
+                    } else {
+                        val projectIcon = when {
+                            project.title.contains("Notas") -> Icons.Default.MenuBook
+                            project.title.contains("Tools") -> Icons.Default.Terminal
+                            project.title.contains("IoT") -> Icons.Default.Sensors
+                            project.title.contains("Chat") -> Icons.Default.Forum
+                            else -> Icons.Default.Work
+                        }
+                        Icon(
+                            imageVector = projectIcon,
+                            contentDescription = null,
+                            modifier = Modifier.size(100.dp).graphicsLayer(alpha = 0.15f),
+                            tint = Color.White
+                        )
                     }
-                    Icon(
-                        imageVector = projectIcon,
-                        contentDescription = null,
-                        modifier = Modifier.size(100.dp).graphicsLayer(alpha = 0.15f),
-                        tint = Color.White
-                    )
                 }
             }
         }

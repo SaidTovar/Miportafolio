@@ -43,36 +43,59 @@ class PortfolioRepositoryImpl : PortfolioRepository {
         projects = listOf(
             Project(
                 title = "Mis Notas Uniguajira",
-                description = "Plataforma académica para estudiantes de la Universidad de La Guajira, validada con usuarios reales y en constante evolución.",
+                description = "Plataforma móvil académica líder para estudiantes de la Universidad de La Guajira. Facilita la consulta de registros académicos, horarios y rendimiento académico en tiempo real.",
                 highlights = listOf(
-                    "Parsing de datos académicos desde HTML",
-                    "Visualización de PDFs y recursos institucionales",
-                    "Optimización de la experiencia de usuario estudiantil"
+                    "Más de 5,000 descargas activas en Google Play Store.",
+                    "Implementación de Web Scraping avanzado para extracción de datos institucionales.",
+                    "Arquitectura robusta basada en MVVM con Jetpack Compose y Firebase."
                 ),
-                tags = listOf("Android", "Parsing", "UX"),
+                tags = listOf("Kotlin", "Compose", "MVVM", "Firebase", "Web Scraping"),
                 isLive = true,
-                url = "https://github.com/SaidTovar/AppMisDatosUniguajira"
+                url = "https://github.com/SaidTovar/AppMisDatosUniguajira",
+                imageUrl = "https://raw.githubusercontent.com/SaidTovar/AppMisDatosUniguajira/refs/heads/main/Mockup/5.png"
             ),
             Project(
-                title = "Guajira Connect",
-                description = "Plataforma social y marketplace local diseñada para potenciar emprendimientos locales con arquitectura escalable.",
+                title = "InfoTools Desktop",
+                description = "Software de alto rendimiento para la digitalización y procesamiento inteligente de información técnica en formato PDF.",
                 highlights = listOf(
-                    "Algoritmos de recomendación",
-                    "Arquitectura escalable para alta concurrencia",
-                    "Integración de mecánicas de red social"
+                    "Manipulación avanzada de documentos mediante PDFBox.",
+                    "Generación y exportación de archivos estructurados basada en plantillas.",
+                    "Desarrollo multiplataforma con Compose Desktop bajo patrón MVVM."
                 ),
-                tags = listOf("KMP", "Marketplace", "Social"),
-                isLive = false
+                tags = listOf("Kotlin", "Compose Desktop", "MVVM", "PDFBox"),
+                isLive = true
             ),
             Project(
-                title = "Multimedia Engine KMP",
-                description = "Motor de procesamiento multimedia multiplataforma con enfoque en streaming y análisis en tiempo real.",
+                title = "Air IoT Control",
+                description = "Ecosistema de control inteligente para sistemas de climatización basado en Internet de las Cosas (IoT).",
                 highlights = listOf(
-                    "Extracción de amplitudes y waveforms",
-                    "Streaming progresivo de audio",
-                    "Mínima dependencia del sistema operativo"
+                    "Comunicación en tiempo real y gestión de usuarios vía Firebase.",
+                    "Integración eficiente con APIs REST mediante Retrofit.",
+                    "Interfaz reactiva y moderna desarrollada íntegramente en Jetpack Compose."
                 ),
-                tags = listOf("KMP", "Multimedia", "Real-time"),
+                tags = listOf("IoT", "Retrofit", "Firebase", "MVVM"),
+                isLive = true
+            ),
+            Project(
+                title = "Next-Gen Chat App",
+                description = "Solución de mensajería instantánea escalable con enfoque en seguridad y baja latencia.",
+                highlights = listOf(
+                    "Inyección de dependencias profesional con Dagger Hilt.",
+                    "Sincronización de datos global mediante Firebase Realtime Database.",
+                    "Código altamente mantenible siguiendo estándares MVVM 2026."
+                ),
+                tags = listOf("Dagger Hilt", "Firebase", "MVVM", "Compose"),
+                isLive = true
+            ),
+            Project(
+                title = "TallerDeConfecciones Manager",
+                description = "Sistema integral de gestión de pedidos y logística de producción para entornos industriales de confección.",
+                highlights = listOf(
+                    "Implementación de flujos CRUD complejos con persistencia remota en MySQL.",
+                    "Consumo eficiente de servicios mediante Retrofit.",
+                    "Arquitectura MVVM para asegurar escalabilidad del producto."
+                ),
+                tags = listOf("Kotlin", "MySQL", "Retrofit", "MVVM"),
                 isLive = true
             )
         ),
@@ -82,14 +105,14 @@ class PortfolioRepositoryImpl : PortfolioRepository {
                 company = "ReadyChatAI.llc",
                 period = "Octubre 2025 - Actualidad",
                 location = "Remoto",
-                description = "Desarrollo de aplicaciones Android modernas enfocadas en comunicación e IA, colaborando directamente en productos clave de la compañía.",
+                description = "Ingeniería de software enfocada en soluciones de comunicación inteligente y escalabilidad de productos móviles.",
                 highlights = listOf(
-                    "Colaboración en 'Translate Text': Un gestor de mensajería SMS/MMS con traducción inteligente integrada.",
-                    "Colaboración en 'AIReply': Aplicación de SMS con respuestas automáticas personalizadas mediante prompts de IA.",
-                    "Implementación de interfaces complejas con Jetpack Compose y optimización de estados.",
-                    "Manejo avanzado de Room Database y diseño de migraciones robustas."
+                    "Liderazgo técnico en 'Translate Text': Integración de motores de traducción por IA en flujos de mensajería.",
+                    "Desarrollo de 'AIReply': Automatización de respuestas mediante LLMs y prompts personalizados.",
+                    "Arquitectura MVVM avanzada, inyección de dependencias y optimización de recomposición en Compose.",
+                    "Garantía de persistencia mediante migraciones seguras en Room Database."
                 ),
-                technologies = listOf("Kotlin", "Compose", "Room", "Coroutines", "AI Integration"),
+                technologies = listOf("Kotlin", "Compose", "MVVM", "AI Integration", "Room"),
                 companyUrl = "https://www.linkedin.com/company/readychataimessenger/posts/?feedView=all",
                 playStoreUrls = listOf(
                     "Translate Text" to "https://play.google.com/store/apps/details?id=com.readychatai.translation_app",
@@ -97,17 +120,17 @@ class PortfolioRepositoryImpl : PortfolioRepository {
                 )
             ),
             Experience(
-                role = "Desarrollador Autónomo",
-                company = "Automatización y Desarrollo",
-                period = "Experiencia Independiente",
+                role = "Desarrollador de Soluciones Autónomo",
+                company = "Ingeniería y Automatización",
+                period = "2022 - 2025",
                 location = "Colombia",
-                description = "Creación de soluciones personalizadas enfocadas en automatización y extracción de datos.",
+                description = "Especialista en la creación de herramientas para la optimización de procesos y digitalización de datos.",
                 highlights = listOf(
-                    "Web scraping y automatización de procesos web",
-                    "Procesamiento y manipulación de archivos Excel/PDF",
-                    "Desarrollo de herramientas de productividad multiplataforma"
+                    "Automatización de flujos de trabajo mediante técnicas de extracción y parsing de datos.",
+                    "Desarrollo de utilitarios multiplataforma para la manipulación de documentos y archivos de datos.",
+                    "Diseño de arquitecturas escalables para aplicaciones de uso intensivo de datos."
                 ),
-                technologies = listOf("Jsoup", "Requests", "Python", "Kotlin")
+                technologies = listOf("Kotlin", "MVVM", "Jsoup", "API REST")
             ),
             Experience(
                 role = "Ingeniero de Soporte",

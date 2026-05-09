@@ -15,7 +15,6 @@ kotlin {
         outputModuleName.set("composeApp")
         browser {
             commonWebpackConfig {
-                mode = KotlinWebpackConfig.Mode.PRODUCTION
                 outputFileName = "composeApp.js"
             }
         }

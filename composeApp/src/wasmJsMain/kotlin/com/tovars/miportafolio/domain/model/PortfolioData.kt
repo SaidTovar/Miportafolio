@@ -18,7 +18,8 @@ data class Project(
     val highlights: List<String> = emptyList(),
     val tags: List<String>,
     val isLive: Boolean,
-    val url: String = ""
+    val url: String = "",
+    val imageUrl: String = ""
 )
 
 data class Experience(
