@@ -107,8 +107,8 @@ class PortfolioRepositoryImpl : PortfolioRepository {
                 location = "Remoto",
                 description = "Ingeniería de software enfocada en soluciones de comunicación inteligente y escalabilidad de productos móviles.",
                 highlights = listOf(
-                    "Liderazgo técnico en 'Translate Text': Integración de motores de traducción por IA en flujos de mensajería.",
-                    "Desarrollo de 'AIReply': Automatización de respuestas mediante LLMs y prompts personalizados.",
+                    "Translate Text: Integración de motores de traducción por IA en flujos de mensajería.",
+                    "AIReply: Automatización de respuestas mediante LLMs y prompts personalizados.",
                     "Arquitectura MVVM avanzada, inyección de dependencias y optimización de recomposición en Compose.",
                     "Garantía de persistencia mediante migraciones seguras en Room Database."
                 ),
@@ -149,6 +149,11 @@ class PortfolioRepositoryImpl : PortfolioRepository {
                 degree = "Ingeniería de Sistemas",
                 institution = "Universidad de La Guajira",
                 period = "Julio 2018 - Noviembre 2023"
+            ),
+            Education(
+                degree = "DESARROLLO DE IOT CON INTERFAZ EN MICROCONTROLADORES",
+                institution = "Universidad de La Guajira",
+                period = "2023 - 2024"
             )
         )
     )
@@ -223,8 +228,8 @@ class PortfolioRepositoryImpl : PortfolioRepository {
                 location = "Remote",
                 description = "Development of modern Android apps focused on communication and AI, collaborating directly on key products.",
                 highlights = listOf(
-                    "Collaboration on 'Translate Text': An SMS/MMS messaging manager with integrated intelligent translation.",
-                    "Collaboration on 'AIReply': SMS application with personalized automatic replies via AI prompts.",
+                    "Translate Text: An SMS/MMS messaging manager with integrated intelligent translation.",
+                    "AIReply: SMS application with personalized automatic replies via AI prompts.",
                     "Implementation of complex interfaces with Jetpack Compose and state optimization.",
                     "Advanced Room Database management and design of robust migrations."
                 ),
@@ -260,6 +265,11 @@ class PortfolioRepositoryImpl : PortfolioRepository {
                 degree = "Software Engineering",
                 institution = "University of La Guajira",
                 period = "July 2018 - November 2023"
+            ),
+            Education(
+                degree = "IoT DEVELOPMENT WITH MICROCONTROLLER INTERFACE",
+                institution = "University of La Guajira",
+                period = "2023 - 2024"
             )
         )
     )
