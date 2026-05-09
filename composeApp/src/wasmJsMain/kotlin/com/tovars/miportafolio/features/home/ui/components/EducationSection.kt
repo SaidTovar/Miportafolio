@@ -19,6 +19,7 @@ import androidx.compose.ui.unit.sp
 import com.tovars.miportafolio.core.ui.components.RevealAnimation
 import com.tovars.miportafolio.core.ui.theme.SilverGray
 import com.tovars.miportafolio.domain.model.Education
+import com.tovars.miportafolio.domain.model.Language
 import dev.chrisbanes.haze.*
 
 @Composable
@@ -26,6 +27,7 @@ fun EducationSection(
     education: List<Education>,
     currentWidth: Int,
     hazeState: HazeState,
+    language: Language,
     modifier: Modifier = Modifier
 ) {
     RevealAnimation { revealModifier ->
@@ -38,7 +40,7 @@ fun EducationSection(
         ) {
             Column(horizontalAlignment = Alignment.CenterHorizontally) {
                 Text(
-                    text = "ACADEMIA",
+                    text = if (language == Language.ES) "ACADEMIA" else "ACADEMIA", // Academia is often used in both or "ACADEMICS"
                     style = MaterialTheme.typography.labelLarge,
                     color = MaterialTheme.colorScheme.primary,
                     letterSpacing = 3.sp,
@@ -46,7 +48,7 @@ fun EducationSection(
                 )
                 Spacer(modifier = Modifier.height(16.dp))
                 Text(
-                    text = "Formación Académica",
+                    text = if (language == Language.ES) "Formación Académica" else "Academic Background",
                     style = if (currentWidth > 1000) MaterialTheme.typography.displayMedium else MaterialTheme.typography.headlineLarge,
                     color = Color.White,
                     fontWeight = FontWeight.Black
