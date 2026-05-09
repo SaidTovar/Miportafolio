@@ -50,7 +50,8 @@ class PortfolioRepositoryImpl : PortfolioRepository {
                     "Optimización de la experiencia de usuario estudiantil"
                 ),
                 tags = listOf("Android", "Parsing", "UX"),
-                isLive = true
+                isLive = true,
+                url = "https://github.com/SaidTovar/AppMisDatosUniguajira"
             ),
             Project(
                 title = "Guajira Connect",
@@ -88,7 +89,12 @@ class PortfolioRepositoryImpl : PortfolioRepository {
                     "Implementación de interfaces complejas con Jetpack Compose y optimización de estados.",
                     "Manejo avanzado de Room Database y diseño de migraciones robustas."
                 ),
-                technologies = listOf("Kotlin", "Compose", "Room", "Coroutines", "AI Integration")
+                technologies = listOf("Kotlin", "Compose", "Room", "Coroutines", "AI Integration"),
+                companyUrl = "https://www.linkedin.com/company/readychataimessenger/posts/?feedView=all",
+                playStoreUrls = listOf(
+                    "Translate Text" to "https://play.google.com/store/apps/details?id=com.readychatai.translation_app",
+                    "AIReply" to "https://play.google.com/store/apps/details?id=com.readychat.smsbase"
+                )
             ),
             Experience(
                 role = "Desarrollador Autónomo",

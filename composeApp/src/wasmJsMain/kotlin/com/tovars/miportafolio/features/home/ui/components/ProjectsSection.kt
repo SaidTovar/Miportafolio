@@ -26,6 +26,9 @@ import com.tovars.miportafolio.domain.model.Language
 import com.tovars.miportafolio.domain.model.Project
 import dev.chrisbanes.haze.HazeState
 
+import androidx.compose.foundation.clickable
+import kotlinx.browser.window
+
 @Composable
 fun ProjectsSection(
     projects: List<Project>,
@@ -144,7 +147,10 @@ fun ProjectItem(
                         style = MaterialTheme.typography.headlineMedium,
                         color = Color.White,
                         fontWeight = FontWeight.Black,
-                        letterSpacing = (-1).sp
+                        letterSpacing = (-1).sp,
+                        modifier = if (project.url.isNotEmpty()) {
+                            Modifier.clickable { window.open(project.url, "_blank") }
+                        } else Modifier
                     )
                 }
                 

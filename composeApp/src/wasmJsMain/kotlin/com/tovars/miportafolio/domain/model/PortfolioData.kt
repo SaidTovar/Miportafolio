@@ -17,7 +17,8 @@ data class Project(
     val description: String,
     val highlights: List<String> = emptyList(),
     val tags: List<String>,
-    val isLive: Boolean
+    val isLive: Boolean,
+    val url: String = ""
 )
 
 data class Experience(
@@ -27,7 +28,9 @@ data class Experience(
     val location: String,
     val description: String = "",
     val highlights: List<String> = emptyList(),
-    val technologies: List<String> = emptyList()
+    val technologies: List<String> = emptyList(),
+    val companyUrl: String = "",
+    val playStoreUrls: List<Pair<String, String>> = emptyList()
 )
 
 data class Education(

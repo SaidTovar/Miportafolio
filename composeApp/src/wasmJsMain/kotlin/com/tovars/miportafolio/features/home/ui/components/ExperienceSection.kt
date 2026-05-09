@@ -23,6 +23,9 @@ import com.tovars.miportafolio.domain.model.Experience
 import com.tovars.miportafolio.domain.model.Language
 import dev.chrisbanes.haze.*
 
+import androidx.compose.foundation.clickable
+import kotlinx.browser.window
+
 @Composable
 fun ExperienceSection(
     experience: List<Experience>,
@@ -126,7 +129,10 @@ fun ExperienceItem(
                                 text = exp.company,
                                 style = MaterialTheme.typography.titleLarge,
                                 color = MaterialTheme.colorScheme.primary,
-                                fontWeight = FontWeight.Bold
+                                fontWeight = FontWeight.Bold,
+                                modifier = if (exp.companyUrl.isNotEmpty()) {
+                                    Modifier.clickable { window.open(exp.companyUrl, "_blank") }
+                                } else Modifier
                             )
                         }
                     }
@@ -169,7 +175,10 @@ fun ExperienceItem(
                         text = exp.company,
                         style = MaterialTheme.typography.titleMedium,
                         color = Color.White.copy(alpha = 0.7f),
-                        fontWeight = FontWeight.Bold
+                        fontWeight = FontWeight.Bold,
+                        modifier = if (exp.companyUrl.isNotEmpty()) {
+                            Modifier.clickable { window.open(exp.companyUrl, "_blank") }
+                        } else Modifier
                     )
                     Spacer(modifier = Modifier.height(16.dp))
                     Row(verticalAlignment = Alignment.CenterVertically, horizontalArrangement = Arrangement.spacedBy(6.dp)) {
@@ -199,12 +208,37 @@ fun ExperienceItem(
                     exp.highlights.forEach { highlight ->
                         Row(verticalAlignment = Alignment.Top, horizontalArrangement = Arrangement.spacedBy(12.dp)) {
                             Box(modifier = Modifier.padding(top = 8.dp).size(6.dp).clip(CircleShape).background(MaterialTheme.colorScheme.primary))
-                            Text(
-                                text = highlight,
-                                style = MaterialTheme.typography.bodyMedium,
-                                color = Color.White.copy(0.7f),
-                                lineHeight = 22.sp
-                            )
+                            
+                            val isAppHighlight = exp.playStoreUrls.any { highlight.contains(it.first) }
+                            if (isAppHighlight) {
+                                val appInfo = exp.playStoreUrls.first { highlight.contains(it.first) }
+                                Row(
+                                    modifier = Modifier.clickable { window.open(appInfo.second, "_blank") },
+                                    verticalAlignment = Alignment.CenterVertically,
+                                    horizontalArrangement = Arrangement.spacedBy(8.dp)
+                                ) {
+                                    Text(
+                                        text = highlight,
+                                        style = MaterialTheme.typography.bodyMedium,
+                                        color = MaterialTheme.colorScheme.primary,
+                                        lineHeight = 22.sp,
+                                        fontWeight = FontWeight.Bold
+                                    )
+                                    Icon(
+                                        imageVector = Icons.Default.OpenInNew,
+                                        contentDescription = null,
+                                        tint = MaterialTheme.colorScheme.primary,
+                                        modifier = Modifier.size(14.dp)
+                                    )
+                                }
+                            } else {
+                                Text(
+                                    text = highlight,
+                                    style = MaterialTheme.typography.bodyMedium,
+                                    color = Color.White.copy(0.7f),
+                                    lineHeight = 22.sp
+                                )
+                            }
                         }
                     }
                 }

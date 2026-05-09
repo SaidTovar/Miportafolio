@@ -145,7 +145,7 @@ fun HeroSection(
                     label = "GitHub",
                     color = Color.White,
                     onClick = {
-                        window.open("https://github.com/SaidTovar/AppMisDatosUniguajira", "_blank")
+                        window.open("https://github.com/SaidTovar", "_blank")
                     }
                 )
             }
