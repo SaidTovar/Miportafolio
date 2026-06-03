@@ -15,13 +15,13 @@ class PortfolioRepositoryImpl : PortfolioRepository {
 
     private fun getSpanishData() = AboutMe(
         name = "Said Tovar",
-        role = "Software Engineer | Mobile Developer",
-        subtitle = "Especializado en Android Nativo, Kotlin Multiplatform e Inteligencia Artificial.",
-        description = "Desarrollador de software multiplataforma con experiencia profesional en desarrollo Android nativo, Kotlin Multiplatform y Flutter, especializado en arquitecturas modernas, interfaces avanzadas, optimización de rendimiento, multimedia y soluciones escalables. Actualmente se desempeña como Desarrollador Android Full Time en ReadyChatAI.llc.",
+        role = "Software Engineer | Android Developer",
+        subtitle = "Especializado en Android Nativo y Kotlin Multiplatform.",
+        description = "Ingeniero de Software especializado en el ecosistema Android con enfoque en Kotlin Multiplatform (KMP) y Jetpack Compose. Experto en el desarrollo de arquitecturas modernas, interfaces avanzadas y soluciones escalables.",
         specialties = listOf(
             Specialty(
                 title = "Android & KMP",
-                description = "Dominio avanzado de Jetpack Compose y Kotlin Multiplatform. Creación de aplicaciones escalables compartiendo lógica de negocio entre Android, Desktop y Web.",
+                description = "Dominio avanzado de Jetpack Compose y Kotlin Multiplatform. Creación de aplicaciones escalables compartiendo lógica de negocio entre plataformas mediante Kotlin.",
                 color = Color(0xFF3DDC84)
             ),
             Specialty(
@@ -36,7 +36,7 @@ class PortfolioRepositoryImpl : PortfolioRepository {
             ),
             Specialty(
                 title = "Automatización & Web",
-                description = "Experiencia en web scraping, automatización de procesos y procesamiento de datos complejos desde formatos como HTML, XML y PDF.",
+                description = "Experiencia en web scraping con Kotlin, automatización de procesos y procesamiento de datos complejos desde formatos como HTML, XML y PDF.",
                 color = Color(0xFFF59E0B)
             )
         ),
@@ -73,7 +73,7 @@ class PortfolioRepositoryImpl : PortfolioRepository {
                     "Integración eficiente con APIs REST mediante Retrofit.",
                     "Interfaz reactiva y moderna desarrollada íntegramente en Jetpack Compose."
                 ),
-                tags = listOf("IoT", "Retrofit", "Firebase", "MVVM"),
+                tags = listOf("Kotlin", "Retrofit", "Firebase", "MVVM"),
                 isLive = true
             ),
             Project(
@@ -82,9 +82,9 @@ class PortfolioRepositoryImpl : PortfolioRepository {
                 highlights = listOf(
                     "Inyección de dependencias profesional con Dagger Hilt.",
                     "Sincronización de datos global mediante Firebase Realtime Database.",
-                    "Código altamente mantenible siguiendo estándares MVVM 2026."
+                    "Código altamente mantenible siguiendo estándares MVVM."
                 ),
-                tags = listOf("Dagger Hilt", "Firebase", "MVVM", "Compose"),
+                tags = listOf("Kotlin", "Dagger Hilt", "Firebase", "MVVM", "Compose"),
                 isLive = true
             ),
             Project(
@@ -101,16 +101,24 @@ class PortfolioRepositoryImpl : PortfolioRepository {
         ),
         experience = listOf(
             Experience(
-                role = "Desarrollador Android",
+                role = "Desarrollador Android (Kotlin & Jetpack Compose)",
                 company = "ReadyChatAI.llc",
                 period = "Octubre 2025 - Actualidad",
                 location = "Remoto",
-                description = "Desarrollo de aplicaciones móviles enfocadas en comunicación e IA.",
+                description = "Desarrollo de soluciones móviles de alta concurrencia y gestión de datos en tiempo real. Colaboración en equipo multidisciplinar bajo metodologías ágiles.",
                 highlights = listOf(
-                    "Translate Text: Integración de motores de traducción por IA en flujos de mensajería.",
-                    "AIReply: Automatización de respuestas mediante LLMs y prompts personalizados."
+                    "Integración de LLMs: Optimización de la comunicación entre la aplicación móvil y servicios de IA (OpenAI/Gemini) mediante arquitecturas de proxy seguras.",
+                    "Ingeniería de NLP: Procesamiento de lenguaje natural enfocado en la normalización de datos y manejo de variantes lingüísticas.",
+                    "Gestión de JSON: Implementación de lógica para el manejo de salidas estructuradas asegurando la integridad de los datos.",
+                    "Arquitectura: Mantenimiento y escalabilidad de sistemas basados en Clean Architecture y MVVM.",
+                    "UI Declarativa: Creación de componentes reutilizables y vistas con Jetpack Compose y Material 3.",
+                    "QA y Testing: Identificación proactiva de fallos y fortalecimiento de la estabilidad mediante pruebas unitarias con JUnit.",
+                    "DI y Modularización: Gestión de dependencias con Dagger Hilt para optimizar la integración de módulos.",
+                    "Persistencia Local: Almacenamiento eficiente mediante Room Database para disponibilidad offline.",
+                    "Servicios Cloud: Implementación técnica para mensajería y sincronización en la nube.",
+                    "Tareas Asíncronas: Optimización de procesos en segundo plano con WorkManager y Coroutines."
                 ),
-                technologies = listOf("Kotlin", "Compose", "MVVM", "AI Integration", "Room"),
+                technologies = listOf("Kotlin", "Jetpack Compose", "Dagger Hilt", "Clean Architecture", "MVVM", "Room", "JUnit", "WorkManager"),
                 companyUrl = "https://www.linkedin.com/company/readychataimessenger/posts/?feedView=all",
                 playStoreUrls = listOf(
                     "Translate Text" to "https://play.google.com/store/apps/details?id=com.readychatai.translation_app",
@@ -122,9 +130,9 @@ class PortfolioRepositoryImpl : PortfolioRepository {
                 company = "Ingeniería y Automatización",
                 period = "2022 - 2025",
                 location = "Colombia",
-                description = "Especialista en la creación de herramientas para la optimización de procesos y digitalización de datos.",
+                description = "Especialista en la creación de herramientas para la optimización de procesos y digitalización de datos utilizando Kotlin.",
                 highlights = listOf(
-                    "Automatización de flujos de trabajo mediante técnicas de extracción y parsing de datos.",
+                    "Más de 5 soluciones de software creadas para la automatización de flujos de trabajo mediante técnicas de extracción y parsing de datos.",
                     "Desarrollo de utilitarios multiplataforma para la manipulación de documentos y archivos de datos.",
                     "Diseño de arquitecturas escalables para aplicaciones de uso intensivo de datos."
                 ),
@@ -158,13 +166,13 @@ class PortfolioRepositoryImpl : PortfolioRepository {
 
     private fun getEnglishData() = AboutMe(
         name = "Said Tovar",
-        role = "Software Engineer | Mobile Developer",
+        role = "Software Engineer | Android Developer",
         subtitle = "Specialized in Native Android, Kotlin Multiplatform, and AI.",
-        description = "Cross-platform software developer with professional experience in native Android, Kotlin Multiplatform, and Flutter. Specialized in modern architectures, advanced interfaces, performance optimization, multimedia, and scalable solutions. Currently working as a Full-Time Android Developer at ReadyChatAI.llc.",
+        description = "Software Engineer specialized in the Android ecosystem with a focus on Kotlin Multiplatform (KMP) and Jetpack Compose. Expert in developing modern architectures, advanced interfaces, and scalable solutions. Currently working as a Full-Time Android Developer at ReadyChatAI.llc.",
         specialties = listOf(
             Specialty(
                 title = "Android & KMP",
-                description = "Advanced mastery of Jetpack Compose and Kotlin Multiplatform. Building scalable apps sharing business logic across Android, Desktop, and Web.",
+                description = "Advanced mastery of Jetpack Compose and Kotlin Multiplatform. Building scalable apps sharing business logic across platforms using Kotlin.",
                 color = Color(0xFF3DDC84)
             ),
             Specialty(
@@ -179,7 +187,7 @@ class PortfolioRepositoryImpl : PortfolioRepository {
             ),
             Specialty(
                 title = "Automation & Web",
-                description = "Experience in web scraping, process automation, and complex data processing from HTML, XML, and PDF formats.",
+                description = "Experience in web scraping with Kotlin, process automation, and complex data processing from HTML, XML, and PDF formats.",
                 color = Color(0xFFF59E0B)
             )
         ),
@@ -192,7 +200,7 @@ class PortfolioRepositoryImpl : PortfolioRepository {
                     "PDF and institutional resource visualization",
                     "Student UX optimization"
                 ),
-                tags = listOf("Android", "Parsing", "UX"),
+                tags = listOf("Kotlin", "Android", "Parsing"),
                 isLive = true
             ),
             Project(
@@ -203,7 +211,7 @@ class PortfolioRepositoryImpl : PortfolioRepository {
                     "Scalable architecture for high concurrency",
                     "Social media mechanics integration"
                 ),
-                tags = listOf("KMP", "Marketplace", "Social"),
+                tags = listOf("Kotlin", "KMP", "Marketplace"),
                 isLive = false
             ),
             Project(
@@ -214,35 +222,43 @@ class PortfolioRepositoryImpl : PortfolioRepository {
                     "Progressive audio streaming",
                     "Minimal OS dependency"
                 ),
-                tags = listOf("KMP", "Multimedia", "Real-time"),
+                tags = listOf("Kotlin", "KMP", "Multimedia"),
                 isLive = true
             )
         ),
         experience = listOf(
             Experience(
-                role = "Android Developer",
+                role = "Android Developer (Kotlin & Jetpack Compose)",
                 company = "ReadyChatAI.llc",
                 period = "October 2025 - Present",
                 location = "Remote",
-                description = "Development of mobile apps focused on communication and AI.",
+                description = "Development of high-concurrency mobile solutions and real-time data management. Collaboration in multidisciplinary teams under agile methodologies.",
                 highlights = listOf(
-                    "Translate Text: An SMS/MMS messaging manager with integrated intelligent translation.",
-                    "AIReply: SMS application with personalized automatic replies via AI prompts."
+                    "LLM Integration: Optimizing communication between the mobile app and AI services (OpenAI/Gemini) through secure proxy architectures.",
+                    "NLP Engineering: Natural language processing focused on data normalization and linguistic variant handling.",
+                    "JSON Management: Implementation of logic for structured output handling, ensuring data integrity.",
+                    "Architecture: Maintenance and scalability of systems based on Clean Architecture and MVVM.",
+                    "Declarative UI: Creation of reusable components and views using Jetpack Compose and Material 3.",
+                    "QA & Testing: Proactive failure identification and stability strengthening through unit testing with JUnit.",
+                    "DI & Modularization: Dependency management with Dagger Hilt to optimize module integration.",
+                    "Local Persistence: Efficient storage using Room Database for offline availability.",
+                    "Cloud Services: Technical implementation for messaging and cloud synchronization.",
+                    "Async Tasks: Optimization of background processes with WorkManager and Coroutines."
                 ),
-                technologies = listOf("Kotlin", "Compose", "Room", "Coroutines", "AI Integration")
+                technologies = listOf("Kotlin", "Jetpack Compose", "Dagger Hilt", "Clean Architecture", "MVVM", "Room", "JUnit", "WorkManager")
             ),
             Experience(
                 role = "Freelance Developer",
                 company = "Automation & Development",
                 period = "Freelance Experience",
                 location = "Colombia",
-                description = "Creation of custom solutions focused on automation and data extraction.",
+                description = "Creation of custom solutions focused on automation and data extraction using Kotlin.",
                 highlights = listOf(
-                    "Web scraping and web process automation",
+                    "Over 5 software solutions created for web scraping and process automation.",
                     "Excel/PDF file processing and manipulation",
                     "Cross-platform productivity tool development"
                 ),
-                technologies = listOf("Jsoup", "Requests", "Python", "Kotlin")
+                technologies = listOf("Kotlin", "Jsoup", "API REST")
             ),
             Experience(
                 role = "Support Engineer",
