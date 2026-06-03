@@ -36,12 +36,15 @@ fun HomeScreen(viewModel: HomeViewModel) {
         modifier = Modifier
             .fillMaxSize()
             .background(MaterialTheme.colorScheme.background)
-            .hazeSource(state = hazeState)
     ) {
-        MeshGradientBackground()
+        Box(
+            modifier = Modifier
+                .fillMaxSize()
+                .hazeSource(state = hazeState)
+        ) {
+            MeshGradientBackground()
 
-        state.aboutMe?.let { aboutMe ->
-            Box(modifier = Modifier.fillMaxSize()) {
+            state.aboutMe?.let { aboutMe ->
                 LazyColumn(
                     modifier = Modifier.fillMaxSize(),
                     state = scrollState,
@@ -57,9 +60,11 @@ fun HomeScreen(viewModel: HomeViewModel) {
                                 currentWidth = currentWidth,
                                 language = state.language,
                                 onExploreProjectsClick = {
-                                    coroutineScope.launch { scrollState.animateScrollToItem(2) }
+                                    coroutineScope.launch { scrollState.animateScrollToItem(3) }
                                 },
-                                onContactClick = { /* Handle contact */ },
+                                onContactClick = {
+                                    coroutineScope.launch { scrollState.animateScrollToItem(5) }
+                                },
                                 modifier = revealModifier
                             )
                         }
@@ -100,6 +105,14 @@ fun HomeScreen(viewModel: HomeViewModel) {
                             language = state.language
                         )
                     }
+
+                    item(key = "Contact") {
+                        ContactSection(
+                            contactInfo = aboutMe.contactInfo,
+                            currentWidth = currentWidth,
+                            language = state.language
+                        )
+                    }
                     
                     item(key = "Footer") {
                         Spacer(modifier = Modifier.height(100.dp))
@@ -119,7 +132,9 @@ fun HomeScreen(viewModel: HomeViewModel) {
                     )
                 }
             }
+        }
 
+        state.aboutMe?.let { aboutMe ->
             NavigationButtons(
                 modifier = Modifier
                     .padding(32.dp)
@@ -132,9 +147,9 @@ fun HomeScreen(viewModel: HomeViewModel) {
                     coroutineScope.launch {
                         when (item) {
                             NavigationItem.Home -> scrollState.animateScrollToItem(0)
-                            NavigationItem.Habilidades -> scrollState.animateScrollToItem(2)
+                            NavigationItem.Habilidades -> scrollState.animateScrollToItem(1)
                             NavigationItem.Proyectos -> scrollState.animateScrollToItem(3)
-                            NavigationItem.Contacto -> { /* Handle Contact */ }
+                            NavigationItem.Contacto -> scrollState.animateScrollToItem(5)
                         }
                     }
                 }

@@ -90,6 +90,10 @@ fun EducationItem(
             .fillMaxWidth()
             .clip(RoundedCornerShape(32.dp))
             .background(Color.White.copy(alpha = 0.01f))
+            .hazeEffect(
+                state = hazeState,
+                style = HazeStyle(tint = HazeTint(Color.White.copy(alpha = 0.02f)), blurRadius = 20.dp)
+            )
             .border(BorderStroke(1.dp, Color.White.copy(0.05f)), RoundedCornerShape(32.dp))
             .padding(if (isDesktop) 40.dp else 24.dp)
     ) {

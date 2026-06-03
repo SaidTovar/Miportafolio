@@ -74,14 +74,25 @@ fun ExpertiseSection(
                         horizontalArrangement = Arrangement.spacedBy(24.dp, Alignment.CenterHorizontally)
                     ) {
                         rowSpecialties.forEachIndexed { colIndex, specialty ->
+                            val rotationAngle = if (currentWidth > 1000) {
+                                if ((rowIndex + colIndex) % 2 == 0) 2f else -2f
+                            } else 0f
+                            
+                            val yOffset = if (currentWidth > 1000 && colIndex % 2 != 0) 40.dp else 0.dp
+
                             RevealAnimation(delayMillis = (rowIndex * 200) + (colIndex * 100)) { itemRevealModifier ->
                                 SpecialtyCard(
                                     specialty = specialty,
                                     hazeState = hazeState,
+                                    rotationCorrection = rotationAngle,
                                     modifier = Modifier
                                         .weight(1f)
                                         .heightIn(min = 280.dp)
                                         .widthIn(max = 400.dp)
+                                        .padding(top = yOffset)
+                                        .graphicsLayer {
+                                            rotationZ = rotationAngle
+                                        }
                                         .then(itemRevealModifier)
                                 )
                             }
@@ -102,7 +113,8 @@ fun ExpertiseSection(
 fun SpecialtyCard(
     specialty: Specialty,
     hazeState: HazeState,
-    modifier: Modifier = Modifier
+    modifier: Modifier = Modifier,
+    rotationCorrection: Float = 0f
 ) {
     val icon = when {
         specialty.title.contains("Android") || specialty.title.contains("KMP") -> Icons.Default.Smartphone
@@ -134,7 +146,9 @@ fun SpecialtyCard(
             )
             .padding(36.dp)
     ) {
-        Column {
+        Column(
+            modifier = Modifier.graphicsLayer { rotationZ = -rotationCorrection }
+        ) {
             Box(
                 modifier = Modifier
                     .size(64.dp)

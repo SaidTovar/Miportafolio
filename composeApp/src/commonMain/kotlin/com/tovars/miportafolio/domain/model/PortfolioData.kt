@@ -40,6 +40,13 @@ data class Education(
     val period: String
 )
 
+data class ContactInfo(
+    val email: String,
+    val linkedinUrl: String,
+    val githubUrl: String,
+    val twitterUrl: String = ""
+)
+
 data class AboutMe(
     val name: String,
     val role: String,
@@ -48,5 +55,6 @@ data class AboutMe(
     val specialties: List<Specialty>,
     val projects: List<Project>,
     val experience: List<Experience>,
-    val education: List<Education>
+    val education: List<Education>,
+    val contactInfo: ContactInfo
 )

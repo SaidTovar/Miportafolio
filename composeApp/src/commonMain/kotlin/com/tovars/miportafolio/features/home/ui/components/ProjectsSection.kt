@@ -25,7 +25,7 @@ import com.tovars.miportafolio.core.ui.theme.SilverGray
 import com.tovars.miportafolio.core.ui.theme.SuccessGreen
 import com.tovars.miportafolio.domain.model.Language
 import com.tovars.miportafolio.domain.model.Project
-import dev.chrisbanes.haze.HazeState
+import dev.chrisbanes.haze.*
 
 import androidx.compose.foundation.clickable
 import kotlinx.browser.window
@@ -101,6 +101,10 @@ fun ProjectItem(
             .fillMaxWidth(if (isDesktop) 0.85f else 1f)
             .clip(RoundedCornerShape(40.dp))
             .background(Color.White.copy(0.02f))
+            .hazeEffect(
+                state = hazeState,
+                style = HazeStyle(tint = HazeTint(Color.White.copy(alpha = 0.02f)), blurRadius = 20.dp)
+            )
             .border(
                 BorderStroke(1.dp, Color.White.copy(0.06f)),
                 RoundedCornerShape(40.dp)

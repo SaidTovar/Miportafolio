@@ -25,6 +25,11 @@ class PortfolioRepositoryImpl : PortfolioRepository {
                 color = Color(0xFF3DDC84)
             ),
             Specialty(
+                title = "Automatización & Web",
+                description = "Experiencia en web scraping con Kotlin, automatización de procesos y procesamiento de datos complejos desde formatos como HTML, XML y PDF.",
+                color = Color(0xFFF59E0B)
+            ),
+            Specialty(
                 title = "IA & Multimedia",
                 description = "Procesamiento de audio en tiempo real, streaming progresivo, visualización de waveforms e integración de APIs de IA para experiencias inteligentes.",
                 color = Color(0xFF0EA5E9)
@@ -33,11 +38,6 @@ class PortfolioRepositoryImpl : PortfolioRepository {
                 title = "Arquitectura & Datos",
                 description = "Clean Architecture, MVVM, Room Database con migraciones robustas y optimización de rendimiento para aplicaciones en producción.",
                 color = Color(0xFF7F52FF)
-            ),
-            Specialty(
-                title = "Automatización & Web",
-                description = "Experiencia en web scraping con Kotlin, automatización de procesos y procesamiento de datos complejos desde formatos como HTML, XML y PDF.",
-                color = Color(0xFFF59E0B)
             )
         ),
         projects = listOf(
@@ -161,6 +161,11 @@ class PortfolioRepositoryImpl : PortfolioRepository {
                 institution = "Universidad de La Guajira",
                 period = "2023 - 2024"
             )
+        ),
+        contactInfo = ContactInfo(
+            email = "saidtovar.dev@gmail.com",
+            linkedinUrl = "https://www.linkedin.com/in/said-tovar-2b1b3b1b3/",
+            githubUrl = "https://github.com/SaidTovar"
         )
     )
 
@@ -168,12 +173,17 @@ class PortfolioRepositoryImpl : PortfolioRepository {
         name = "Said Tovar",
         role = "Software Engineer | Android Developer",
         subtitle = "Specialized in Native Android, Kotlin Multiplatform, and AI.",
-        description = "Software Engineer specialized in the Android ecosystem with a focus on Kotlin Multiplatform (KMP) and Jetpack Compose. Expert in developing modern architectures, advanced interfaces, and scalable solutions. Currently working as a Full-Time Android Developer at ReadyChatAI.llc.",
+        description = "Software Engineer specialized in the Android ecosystem with a focus on Kotlin Multiplatform (KMP) and Jetpack Compose. Expert in developing modern architectures, advanced interfaces, and scalable solutions.",
         specialties = listOf(
             Specialty(
                 title = "Android & KMP",
                 description = "Advanced mastery of Jetpack Compose and Kotlin Multiplatform. Building scalable apps sharing business logic across platforms using Kotlin.",
                 color = Color(0xFF3DDC84)
+            ),
+            Specialty(
+                title = "Automation & Web",
+                description = "Experience in web scraping with Kotlin, process automation, and complex data processing from HTML, XML, and PDF formats.",
+                color = Color(0xFFF59E0B)
             ),
             Specialty(
                 title = "AI & Multimedia",
@@ -184,45 +194,64 @@ class PortfolioRepositoryImpl : PortfolioRepository {
                 title = "Architecture & Data",
                 description = "Clean Architecture, MVVM, Room Database with robust migrations, and performance optimization for production apps.",
                 color = Color(0xFF7F52FF)
-            ),
-            Specialty(
-                title = "Automation & Web",
-                description = "Experience in web scraping with Kotlin, process automation, and complex data processing from HTML, XML, and PDF formats.",
-                color = Color(0xFFF59E0B)
             )
         ),
         projects = listOf(
             Project(
                 title = "Mis Notas Uniguajira",
-                description = "Academic platform for students at University of La Guajira, validated with real users and constantly evolving.",
+                description = "Academic mobile platform for students at the University of La Guajira. Facilitates the consultation of academic records, schedules, and academic performance in real time.",
                 highlights = listOf(
-                    "Academic data parsing from HTML",
-                    "PDF and institutional resource visualization",
-                    "Student UX optimization"
+                    "Over 5,000 active downloads on Google Play Store.",
+                    "Implementation of advanced Web Scraping for institutional data extraction.",
+                    "Robust architecture based on MVVM with Jetpack Compose and Firebase."
                 ),
-                tags = listOf("Kotlin", "Android", "Parsing"),
+                tags = listOf("Kotlin", "Compose", "MVVM", "Firebase", "Web Scraping"),
+                isLive = true,
+                url = "https://github.com/SaidTovar/AppMisDatosUniguajira",
+                imageUrl = "https://raw.githubusercontent.com/SaidTovar/AppMisDatosUniguajira/refs/heads/main/Mockup/5.png"
+            ),
+            Project(
+                title = "InfoTools Desktop",
+                description = "High-performance software for the digitization and intelligent processing of technical information in PDF format.",
+                highlights = listOf(
+                    "Advanced document manipulation using PDFBox.",
+                    "Generation and export of structured files based on templates.",
+                    "Cross-platform development with Compose Desktop under MVVM pattern."
+                ),
+                tags = listOf("Kotlin", "Compose Desktop", "MVVM", "PDFBox"),
                 isLive = true
             ),
             Project(
-                title = "Guajira Connect",
-                description = "Local social platform and marketplace designed to boost local businesses with scalable architecture.",
+                title = "Air IoT Control",
+                description = "Intelligent control ecosystem for air conditioning systems based on the Internet of Things (IoT).",
                 highlights = listOf(
-                    "Recommendation algorithms",
-                    "Scalable architecture for high concurrency",
-                    "Social media mechanics integration"
+                    "Real-time communication and user management via Firebase.",
+                    "Efficient integration with REST APIs using Retrofit.",
+                    "Modern reactive interface fully developed in Jetpack Compose."
                 ),
-                tags = listOf("Kotlin", "KMP", "Marketplace"),
-                isLive = false
+                tags = listOf("Kotlin", "Retrofit", "Firebase", "MVVM"),
+                isLive = true
             ),
             Project(
-                title = "Multimedia Engine KMP",
-                description = "Cross-platform multimedia processing engine focusing on streaming and real-time analysis.",
+                title = "Next-Gen Chat App",
+                description = "Scalable instant messaging solution with a focus on security and low latency.",
                 highlights = listOf(
-                    "Amplitude and waveform extraction",
-                    "Progressive audio streaming",
-                    "Minimal OS dependency"
+                    "Professional dependency injection with Dagger Hilt.",
+                    "Global data synchronization via Firebase Realtime Database.",
+                    "Highly maintainable code following MVVM standards."
                 ),
-                tags = listOf("Kotlin", "KMP", "Multimedia"),
+                tags = listOf("Kotlin", "Dagger Hilt", "Firebase", "MVVM", "Compose"),
+                isLive = true
+            ),
+            Project(
+                title = "TallerDeConfecciones Manager",
+                description = "Comprehensive order management and production logistics system for industrial garment environments.",
+                highlights = listOf(
+                    "Implementation of complex CRUD flows with remote MySQL persistence.",
+                    "Efficient consumption of services using Retrofit.",
+                    "MVVM architecture to ensure product scalability."
+                ),
+                tags = listOf("Kotlin", "MySQL", "Retrofit", "MVVM"),
                 isLive = true
             )
         ),
@@ -238,27 +267,32 @@ class PortfolioRepositoryImpl : PortfolioRepository {
                     "NLP Engineering: Natural language processing focused on data normalization and linguistic variant handling.",
                     "JSON Management: Implementation of logic for structured output handling, ensuring data integrity.",
                     "Architecture: Maintenance and scalability of systems based on Clean Architecture and MVVM.",
-                    "Declarative UI: Creation of reusable components and views using Jetpack Compose and Material 3.",
-                    "QA & Testing: Proactive failure identification and stability strengthening through unit testing with JUnit.",
-                    "DI & Modularization: Dependency management with Dagger Hilt to optimize module integration.",
+                    "Declarative UI: Creation of reusable components and views with Jetpack Compose and Material 3.",
+                    "QA and Testing: Proactive failure identification and stability strengthening through unit testing with JUnit.",
+                    "DI and Modularization: Dependency management with Dagger Hilt to optimize module integration.",
                     "Local Persistence: Efficient storage using Room Database for offline availability.",
                     "Cloud Services: Technical implementation for messaging and cloud synchronization.",
                     "Async Tasks: Optimization of background processes with WorkManager and Coroutines."
                 ),
-                technologies = listOf("Kotlin", "Jetpack Compose", "Dagger Hilt", "Clean Architecture", "MVVM", "Room", "JUnit", "WorkManager")
+                technologies = listOf("Kotlin", "Jetpack Compose", "Dagger Hilt", "Clean Architecture", "MVVM", "Room", "JUnit", "WorkManager"),
+                companyUrl = "https://www.linkedin.com/company/readychataimessenger/posts/?feedView=all",
+                playStoreUrls = listOf(
+                    "Translate Text" to "https://play.google.com/store/apps/details?id=com.readychatai.translation_app",
+                    "AIReply" to "https://play.google.com/store/apps/details?id=com.readychat.smsbase"
+                )
             ),
             Experience(
-                role = "Freelance Developer",
-                company = "Automation & Development",
-                period = "Freelance Experience",
+                role = "Autonomous Solutions Developer",
+                company = "Engineering & Automation",
+                period = "2022 - 2025",
                 location = "Colombia",
-                description = "Creation of custom solutions focused on automation and data extraction using Kotlin.",
+                description = "Specialist in the creation of tools for process optimization and data digitization using Kotlin.",
                 highlights = listOf(
-                    "Over 5 software solutions created for web scraping and process automation.",
-                    "Excel/PDF file processing and manipulation",
-                    "Cross-platform productivity tool development"
+                    "Over 5 software solutions created for work flow automation using data extraction and parsing techniques.",
+                    "Development of cross-platform utilities for the manipulation of documents and data files.",
+                    "Design of scalable architectures for data-intensive applications."
                 ),
-                technologies = listOf("Kotlin", "Jsoup", "API REST")
+                technologies = listOf("Kotlin", "MVVM", "Jsoup", "API REST")
             ),
             Experience(
                 role = "Support Engineer",
@@ -268,21 +302,26 @@ class PortfolioRepositoryImpl : PortfolioRepository {
                 description = "Resolution of technical incidents and user-oriented support.",
                 highlights = listOf(
                     "Technical diagnosis and error documentation",
-                    "Internal support process optimization"
+                    "Optimization of internal support processes"
                 )
             )
         ),
         education = listOf(
             Education(
-                degree = "Software Engineering",
+                degree = "Systems Engineering",
                 institution = "University of La Guajira",
                 period = "July 2018 - November 2023"
             ),
             Education(
-                degree = "DIPLOMADO DE DESARROLLO DE IOT CON INTERFAZ EN MICROCONTROLADORES",
+                degree = "DIPLOMA IN IOT DEVELOPMENT WITH MICROCONTROLLER INTERFACE",
                 institution = "University of La Guajira",
                 period = "2023 - 2024"
             )
+        ),
+        contactInfo = ContactInfo(
+            email = "saidtovar.dev@gmail.com",
+            linkedinUrl = "https://www.linkedin.com/in/said-tovar-2b1b3b1b3/",
+            githubUrl = "https://github.com/SaidTovar"
         )
     )
 }

@@ -22,8 +22,8 @@ import com.tovars.miportafolio.core.ui.theme.SilverGray
 import com.tovars.miportafolio.domain.model.Experience
 import com.tovars.miportafolio.domain.model.Language
 import dev.chrisbanes.haze.*
-
 import androidx.compose.foundation.clickable
+import androidx.compose.material.icons.automirrored.filled.OpenInNew
 import kotlinx.browser.window
 
 @Composable
@@ -94,6 +94,10 @@ fun ExperienceItem(
             .fillMaxWidth()
             .clip(RoundedCornerShape(32.dp))
             .background(Color.White.copy(alpha = 0.01f))
+            .hazeEffect(
+                state = hazeState,
+                style = HazeStyle(tint = HazeTint(Color.White.copy(alpha = 0.02f)), blurRadius = 20.dp)
+            )
             .border(BorderStroke(1.dp, Color.White.copy(0.05f)), RoundedCornerShape(32.dp))
             .padding(if (isDesktop) 40.dp else 24.dp)
     ) {
@@ -225,7 +229,7 @@ fun ExperienceItem(
                                         fontWeight = FontWeight.Bold
                                     )
                                     Icon(
-                                        imageVector = Icons.Default.OpenInNew,
+                                        imageVector = Icons.AutoMirrored.Filled.OpenInNew,
                                         contentDescription = null,
                                         tint = MaterialTheme.colorScheme.primary,
                                         modifier = Modifier.size(14.dp)

@@ -53,9 +53,9 @@ fun NavigationButtons(
             .hazeEffect(
                 state = hazeState,
                 style = HazeStyle(
-                    tint = HazeTint(color = Color.Black.copy(alpha = 0.4f)),
-                    blurRadius = 30.dp,
-                    noiseFactor = 0.15f
+                    tint = HazeTint(color = Color.Black.copy(alpha = 0.6f)),
+                    blurRadius = 8.dp,
+                    noiseFactor = 0.1f
                 )
             )
             .border(1.dp, Color.White.copy(alpha = 0.1f), RoundedCornerShape(100.dp)),
